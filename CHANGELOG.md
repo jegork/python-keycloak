@@ -43,3 +43,23 @@ entitlement, instropect)
 
 * Add get_idps
 * Rework group functions
+
+## [0.28.0] - 2022-03-28
+
+* Add async support
+
+## [0.28.1] - 2022-03-30
+
+* Fix bug
+
+## [0.28.4] - 2022-04-19
+
+* Fix bug in admin (not awaited async function)
+
+## [0.28.5] - 2022-06-28
+
+* Fix bug in admin (not awaited async function)
+
+## [0.28.6] - 2022-06-28
+
+* Fix bug with unclosed httpx client

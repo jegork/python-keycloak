@@ -2,59 +2,8 @@
 [![Documentation Status](https://readthedocs.org/projects/python-keycloak/badge/?version=latest)](http://python-keycloak.readthedocs.io/en/latest/?badge=latest)
 
 
-Python Keycloak
-====================
+## This is an async version of the original [python-keycloak](https://github.com/marcospereirampj/python-keycloak) package
 
-For review- see https://github.com/marcospereirampj/python-keycloak
-
-**python-keycloak** is a Python package providing access to the Keycloak API.
-
-## Installation
-
-### Via Pypi Package:
-
-``` $ pip install python-keycloak ```
-
-### Manually
-
-``` $ python setup.py install ```
-
-## Dependencies
-
-python-keycloak depends on:
-
-* Python 3
-* [requests](https://requests.readthedocs.io)
-* [python-jose](http://python-jose.readthedocs.io/en/latest/)
-
-### Tests Dependencies
-
-* unittest
-* [httmock](https://github.com/patrys/httmock)
-
-## Bug reports
-
-Please report bugs and feature requests at
-https://github.com/marcospereirampj/python-keycloak/issues
-
-## Documentation
-
-The documentation for python-keycloak is available on [readthedocs](http://python-keycloak.readthedocs.io).
-
-## Contributors
-
-* [Agriness Team](http://www.agriness.com/pt/)
-* [Marcos Pereira](marcospereira.mpj@gmail.com)
-* [Martin Devlin](https://bitbucket.org/devlinmpearson/) 
-* [Shon T. Urbas](https://bitbucket.org/surbas/)
-* [Markus Spanier](https://bitbucket.org/spanierm/)
-* [Remco Kranenburg](https://bitbucket.org/Remco47/)
-* [Armin](https://bitbucket.org/arminfelder/)
-* [njordr](https://bitbucket.org/njordr/)
-* [Josha Inglis](https://bitbucket.org/joshainglis/)
-* [Alex](https://bitbucket.org/alex_zel/)
-* [Ewan Jone](https://bitbucket.org/kisamoto/)
-* [Lukas Martini](https://github.com/lutoma)
 
 ## Usage
 
@@ -119,7 +68,8 @@ keycloak_admin = KeycloakAdmin(server_url="http://localhost:8080/auth/",
                                user_realm_name="only_if_other_realm_than_master",
                                client_secret_key="client-secret",
                                verify=True)
-        
+await keycloak_admin.connect()
+
 # Add user                       
 new_user = keycloak_admin.create_user({"email": "example@example.com",
                     "username": "example@example.com",
